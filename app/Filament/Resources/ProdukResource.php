@@ -40,10 +40,12 @@ class ProdukResource extends Resource
                 Tables\Columns\TextColumn::make('kategori.name')->searchable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('kategori_id')
+                ->relationship('kategori', 'name'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
