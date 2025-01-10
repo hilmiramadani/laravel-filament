@@ -13,7 +13,8 @@ class Produk extends Model
     protected $fillable =  [
         'kode',
         'name',
-        'kategori_id'
+        'kategori_id',
+        'harga'
     ];
 
     public function kategori(): BelongsTo

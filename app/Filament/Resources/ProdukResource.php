@@ -28,6 +28,7 @@ class ProdukResource extends Resource
                 Forms\Components\Select::make('kategori_id')
                 ->relationship('kategori', 'name')
                 ->required(),
+                Forms\Components\TextInput::make('harga'),
             ]);
     }
 
@@ -38,6 +39,7 @@ class ProdukResource extends Resource
                 Tables\Columns\TextColumn::make('kode')->sortable(),
                 Tables\Columns\TextColumn::make('name')->searchable(),
                 Tables\Columns\TextColumn::make('kategori.name')->searchable(),
+                Tables\Columns\TextColumn::make('harga'),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('kategori_id')

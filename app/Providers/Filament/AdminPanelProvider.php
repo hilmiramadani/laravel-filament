@@ -59,7 +59,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 FilamentEditProfilePlugin::make()
-                ->setIcon('heroicon-o-user')
+                ->setIcon('heroicon-o-identification')
                 ->shouldShowAvatarForm(
                     value: true,
                     directory: 'avatars',
